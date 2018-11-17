@@ -76,8 +76,7 @@
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor">
 	</bean>
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
-
-  	<bean id="userserviceImpl" class="com.zetagile.news.services.impl.UserServicesImpl"/>
+	<bean id="userserviceImpl" class="com.zetagile.news.services.impl.UserServicesImpl"/>
 	<bean id="userdaoImpl" class="com.zetagile.news.dao.impl.UserDaoImpl"/>
 		
 </beans>
