@@ -61,7 +61,7 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 	private static long previousIDTime = 0;
 	private static long separator = 0;
 
-	private synchronized static String getUserIdgen() {
+	public synchronized static String getUserIdgen() {
 
 		long currentTime = new Date().getTime();
 

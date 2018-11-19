@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.zetagile.news.services.ImageUploadServices;
+import com.zetagile.news.services.impl.ImageUploadServicesImpl;
 import com.zetagile.news.services.util.ImageService;
 import com.zetagile.news.resource.ImageUploadResources;
 import com.zetagile.news.resource.util.ClientVersion;
@@ -66,7 +68,7 @@ public class UploadImageResourceImpl implements ImageUploadResources {
 				response.setStatus(true);
 				logger.info(" Final URL is=" + url);
 				POITextExtractor extractor;
-				String SourceFileString;
+				String SourceFileString = null;
 				if (sourceFile.getOriginalFilename().endsWith(".pdf")) {
 					try {
 						parser = new PDFParser(sourceFile.getInputStream());
@@ -110,8 +112,13 @@ public class UploadImageResourceImpl implements ImageUploadResources {
 						e.printStackTrace();
 					}
 				}
-				
-				
+				if (SourceFileString != null) {
+					ImageUploadServicesImpl imageUploadServices = new ImageUploadServicesImpl();
+					imageUploadServices.documentParse(SourceFileString);
+				}else {
+					response.setMessage("There is Empty in Documnet");
+					return ResponseEntity.ok().body(response);
+				}
 			} catch (IOException e) {
 				logger.error("caught exception " + e.getMessage() + " in uploadimage()");
 				response.setMessage(e.getMessage());
