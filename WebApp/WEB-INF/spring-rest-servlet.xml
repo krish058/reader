@@ -78,5 +78,8 @@
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 	<bean id="userserviceImpl" class="com.zetagile.news.services.impl.UserServicesImpl"/>
 	<bean id="userdaoImpl" class="com.zetagile.news.dao.impl.UserDaoImpl"/>
-		
+	<bean id="imageuploadserviceImpl" class="com.zetagile.news.services.impl.ImageUploadServicesImpl"/>
+	<bean id="imageUploadDao" class="com.zetagile.news.dao.impl.ImageUploadDaoImpl"/>
+	<bean id="tenderCodeDao" class="com.zetagile.news.dao.impl.TenderCodeDaoImpl"/>
+	
 </beans>
