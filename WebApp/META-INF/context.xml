@@ -54,9 +54,9 @@
 	
 	<Resource name="jdbc/appDataSource" auth="Container"
 		type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/news_db"
+		url="jdbc:mysql://localhost:3306/reader_db"
 		username="root"
-		password="123456" 
+		password="root" 
 		connectionProperties="createDatabaseIfNotExist=true"
 		initialSize="1" maxTotal="200" maxIdle="8"
 		maxWaitMillis="120000" validationQuery="SELECT 1" testOnBorrow="true"
