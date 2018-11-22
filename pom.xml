@@ -20,38 +20,9 @@
 				<directory>src/resources</directory>
 				<includes>
 					<include>
-						config.json
-					</include>
-					<include>
-						spring-rest-servlet.xml
-					</include>
-					<include>
-						log4j.properties
-					</include>
-					<include>
 						project.properties
 					</include>
-					<include>
-						vdeliver.properties
-					</include>
-					<include>
-						postmates.properties
-					</include>
-					<include>
-						html.properties
-					</include>
-					<include>
-						paytmerrorcodes.properties
-					</include>
-					<include>
-						payuerrorcodes.properties
-					</include>
-					<include>
-						rolepermissions.json
-					</include>
-					<include>
-						viandddelivery.properties
-					</include>
+					
 				</includes>
 			</resource>
 		</resources>
